@@ -28,6 +28,7 @@ cpp 로 진행중
 최솟값 만들기
 피보나치 수
 행렬의 곱셈
+DATETIME에서 DATE로 형 변환
 JadenCase 문자열 만들기
 k진수에서 소수 개수 구하기
 NULL 처리하기
