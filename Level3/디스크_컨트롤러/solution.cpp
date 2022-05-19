@@ -1,15 +1,20 @@
 #include <string>
 #include <vector>
+#include <queue>
 #include <algorithm>
 
 using namespace std;
 
-bool compare(vector<int> a, vector<int> b) {
-    return a[1] < b[1];
-}
+typedef struct Node {
+    int s, d;
+    bool operator<(Node b) const {
+        return d > b.d;
+    }
+} Node;
 
 int solution(vector<vector<int>> jobs) {
-    vector<vector<int>> rec;
+    priority_queue<Node> rec;
+    Node temp;
     int answer = 0;
     int length = jobs.size();
     int cnt = jobs.size();
@@ -17,7 +22,9 @@ int solution(vector<vector<int>> jobs) {
     while (idx < length) {
         for (int i = 0; i < cnt; i++) {
             if ((start < jobs[i][0]) && (jobs[i][0] <= now)) {
-                rec.push_back(jobs[i]);
+                temp.s = jobs[i][0];
+                temp.d = jobs[i][1];
+                rec.push(temp);
                 jobs.erase(jobs.begin() + i);
                 i--;
                 cnt--;
@@ -26,13 +33,13 @@ int solution(vector<vector<int>> jobs) {
         if (rec.empty())
             now += 1;
         else {
-            sort(rec.begin(), rec.end(), compare);
+            temp = rec.top();
+            rec.pop();
+            // printf("%d %d\n", temp.s, temp.d);
             start = now;
-            now += rec[0][1];
-            answer += now - rec[0][0];
+            now += temp.d;
+            answer += now - temp.s;
             idx += 1;
-            // printf("[%d] %d %d\n", now, rec[0][0], rec[0][1]);
-            rec.erase(rec.begin());
         }
     }
     return answer / length;
