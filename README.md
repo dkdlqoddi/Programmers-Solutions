@@ -5,10 +5,10 @@ cpp 로 진행중
 
 다른 언어는 천천히...
 
-# [Level1]
-* 로또의 최고 순위와 최저 순위
-* 신고 결과 받기
-* 신규 아이디 추천
+# [Level1](https://github.com/dkdlqoddi/Programmers-Solutions/tree/main/Level1 "Level1")
+* [로또의 최고 순위와 최저 순위](https://github.com/dkdlqoddi/Programmers-Solutions/tree/main/Level1/%EB%A1%9C%EB%98%90%EC%9D%98_%EC%B5%9C%EA%B3%A0_%EC%88%9C%EC%9C%84%EC%99%80_%EC%B5%9C%EC%A0%80_%EC%88%9C%EC%9C%84 "로또의 최고 순위와 최저 순위")
+* [신고 결과 받기](https://github.com/dkdlqoddi/Programmers-Solutions/tree/main/Level1/%EC%8B%A0%EA%B3%A0_%EA%B2%B0%EA%B3%BC_%EB%B0%9B%EA%B8%B0 "신고 결과 받기")
+* [신규 아이디 추천](https://github.com/dkdlqoddi/Programmers-Solutions/tree/main/Level1/%EC%8B%A0%EA%B7%9C_%EC%95%84%EC%9D%B4%EB%94%94_%EC%B6%94%EC%B2%9C "신규 아이디 추천")
 
 # [Level2]
 * [3차] 파일명 정렬
